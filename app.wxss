@@ -1,0 +1,10 @@
+@import"./style/iconfont.wxss";
+@import "./example/dist/common/index.wxss";
+/**app.wxss**/
+@import 'weui.wxss';
+/* 全局样式 */
+page,view,text,img{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}

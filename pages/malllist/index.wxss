@@ -1,0 +1,17 @@
+/* pages/malllist/index.wxss */
+.container{
+  background-color: #f8f8f8;
+}
+
+swiper {
+  height: 370rpx;
+  width: 100%;
+}
+swiper-item {
+  height: 100%;
+  width: 100%;
+}
+swiper-item image {
+	height:100%;
+	width: 100%;
+}

@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/service/index",
+    "pages/malllist/index",
+    "pages/malldetail/index",
+    "pages/cart/index",
+    "pages/grouporder/index",
+    "pages/serviceorder/index",
+    "pages/shoppingorder/index",
+    "pages/search/index",
+    "pages/my/index",
+    "pages/member/index",
+    "pages/coupon/index",
+    "pages/device/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/system/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4954fc",
+    "navigationBarTitleText": "喜锦机械",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents":{
+    "van-button": "./example/dist/button/index",
+    "van-row": "./example/dist/row/index",
+    "van-col": "./example/dist/col/index",
+    "van-grid": "./example/dist/grid/index",
+    "van-grid-item": "./example/dist/grid-item/index",
+    "van-nav-bar": "./example/dist/nav-bar/index",
+    "van-card": "./example/dist/card/index",
+    "van-image": "./example/dist/image/index",
+    "van-checkbox": "./example/dist/checkbox/index",
+    "van-checkbox-group": "./example/dist/checkbox-group/index",
+    "van-radio": "./example/dist/radio/index", 
+    "van-radio-group": "./example/dist/radio-group/index",
+    "van-field": "./example/dist/field/index"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#3574fa",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "img/icons/index.png",
+        "selectedIconPath": "img/icons/index-o.png"
+      }, {
+        "pagePath": "pages/service/index",
+        "text": "服 务",
+        "iconPath": "img/icons/service.png",
+        "selectedIconPath": "img/icons/service-o.png"
+      }, {
+        "pagePath": "pages/malllist/index",
+        "text": "商 城",
+        "iconPath": "img/icons/index.png",
+        "selectedIconPath": "img/icons/index-o.png"
+      }, {
+        "pagePath": "pages/my/index",
+        "text": "我 的",
+        "iconPath": "img/icons/my.png",
+        "selectedIconPath": "img/icons/my-o.png"
+      }
+
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

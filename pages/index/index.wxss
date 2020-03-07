@@ -1,0 +1,86 @@
+.container{
+  background-color: #f8f8f8;
+}
+
+swiper {
+  height: 370rpx;
+  width: 100%;
+}
+swiper-item {
+  height: 100%;
+  width: 100%;
+}
+swiper-item image {
+	height:100%;
+	width: 100%;
+}
+.fuwu{
+  background-color: #fff;
+  margin-top: 10px;
+  height: 280rpx;
+}
+.fuwu_top image{
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  height: 16px;
+  width: 3px;
+}
+.fuwu_center image{
+  margin-top: 10px;
+  width: 90%;
+  height: 75rpx;
+}
+.fuwu_footer image{
+  margin-top: 10px;
+  width: 100%;
+  height: 75rpx;
+}
+.xinpin{
+  background-color: #fff;
+  margin-top: 10px;
+  height: 330rpx;
+}
+.xinpin_top image{
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  height: 16px;
+  width: 3px;
+}
+
+.btn{
+  background-color: #3574fa;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+  float: left;
+  
+}
+.tuangou{
+  background-color: #fff;
+  margin-top: 10px;
+  height: 350rpx;
+}
+.xinpin.xinpin_center{
+  position: relative;
+  padding: 20px;
+}
+.tuangou.tuan_cen{
+  margin-top: 30px;
+  font-size:20rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image {
+  width: 746rpx;
+}
+
+
+.child {
+  margin-left: 12rpx;
+  background-color: #f9f9f9;
+  width: 280rpx;
+  height: 85rpx;  
+  font-size:18rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}  

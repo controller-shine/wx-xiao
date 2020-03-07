@@ -1,0 +1,78 @@
+<view class="container">
+  <view class="page-body">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{swiperList}}" wx:key="id">
+          <swiper-item>
+            <view class="swiper-item {{item}}"><image mode="widthFix" src="http://49.234.18.144/jx/public{{item.img}}"></image></view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+
+  <view class="fuwu">
+    <van-row class="fuwu_top">
+      <van-col span="1"><image src="../../img/index/图层 6.png"></image></van-col>
+      <van-col span="12"> <view style="margin-top:10rpx">服务流程</view> </van-col>
+    </van-row>
+    <van-row class="fuwu_center">
+      <van-col offset="3" span="20"><image src="../../img/index/组 11.png"></image></van-col>
+    </van-row>
+    <van-row class="fuwu_footer">
+      <van-col offset="5" span="14"><image src="../../img/index/Base.png"></image></van-col>
+    </van-row>
+  </view>
+
+  <view class="xinpin">
+    <van-row class="xinpin_top">
+      <van-col span="1"><image src="../../img/index/图层 6.png"></image></van-col>
+      <van-col span="12"><view style="margin-top:10rpx">新品上架</view></van-col>
+    </van-row>
+    <van-col offset="1" span="22">
+      <van-grid column-num="4" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{productList}}" wx:key="id">
+          <image style="width: 100%; height: 120rpx;"src="http://49.234.18.144/jx/public{{item.img}}"/>
+          <view style=" font-size:20rpx; margin-top:10rpx">{{item.model}}</view>
+          <van-row >
+              <van-col offset="1" span="5"> <button class="btn" style="width: 90rpx; margin-top:10rpx; height: 35rpx; color:#fff; font-size:20rpx;font-family: Arial, Helvetica, sans-serif;" size="mini">{{item.price}}万</button></van-col>
+          </van-row>
+        </van-grid-item>
+      </van-grid>
+    </van-col>
+  </view>
+
+  <view class="tuangou">
+    <van-row class="xinpin_top">
+      <van-col span="1"><image src="../../img/index/图层 6.png"></image></van-col>
+      <van-col span="12"> <view style="margin-top:10rpx">团购活动</view></van-col>
+    </van-row>
+    <van-col offset="2" span="20" wx:for="{{swiperList}}" wx:key="id">
+      <van-grid column-num="4" border="{{ false }}">
+        <van-row>
+        <van-grid-item use-slot>
+            <image style="width: 100%; height: 120rpx; box-shadow:0px 0px 1px 1px #b6cdfd; border-radius:3px;"src="http://49.234.18.144/jx/public{{item.img}}"/>
+        </van-grid-item>
+        <van-col span="10"> 
+        <view style=" margin-left:10px; margin-top: 15px;font-size:22rpx;font-family: Arial, Helvetica, sans-serif;" class="tuan_cen">瑞恒D900通用压缩机</view> 
+        <view class="image-parent">
+          <view class="child">
+            <van-row >
+              <van-col span="12"> <view style="margin-top:10rpx; margin-left:10rpx;color:#ff0000;">团购价：万元</view> </van-col>
+              <van-col span="12"> <view style="margin-top:10rpx; margin-left:20rpx;text-decoration:line-through;color:#969696;">原价：万元</view></van-col>
+            </van-row>
+            <van-row> 
+              <van-col span="12"><view style="margin-top:10rpx;margin-left:10rpx;color:#ff0000;">已入团：人</view></van-col>
+              <van-col span="12"><view style="margin-top:10rpx;margin-left:20rpx;color:#969696;">成团要求：人</view></van-col>
+            </van-row> 
+          </view>
+        </view> 
+        </van-col>
+        <van-col span="6">
+          <view><image style="margin-left:50rpx; margin-top:60rpx; width: 100%; height: 60rpx;"src="../../img/index/立即加入.png"/></view>
+        </van-col>
+        </van-row>
+      </van-grid>
+    </van-col>
+  </view>
+      
+  
+</view>
