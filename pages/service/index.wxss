@@ -1,8 +1,11 @@
 /* pages/service/index.wxss */
 .container{
-  background-color: fff;
+  background-color: #f8f8f8;
 }
 
+.bg{
+  background-color: #fff;
+}
 
 swiper {
   height: 258rpx;
@@ -16,6 +19,10 @@ swiper-item image {
 	height:100%;
 	width: 100%;
 }
+.leixin{
+  font-size: 32rpx;
+  background-color: #fff;
+}
 .leixin_an{
   padding: 6rpx;
 }
@@ -23,13 +30,15 @@ swiper-item image {
   margin-left: 15%;
 }
 .xinxi{
-  background-color: #f8f8f8;
+  margin-top: 10px;
+  font-size: 32rpx;
+  background-color: #fff;
 }
 .biaodan{
-  width: 90%;
-  padding: 20rpx;
-  margin-left: 8%;
-  font-size: 28rpx;
+  width: 100%;
+  padding: 10rpx;
+  margin-left: 0;
+  font-size: 30rpx;
   font-family: Arial, Helvetica, sans-serif;
 }
 .tijiao image{
@@ -37,3 +46,22 @@ swiper-item image {
     width: 100%;
     height: 75rpx;
 }
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+.orderBTN{
+  background-color: #fff;
+}
+.guzhang{
+  width: 150%;
+  padding: 20rpx;
+  margin-left: 1%;
+  font-size: 32rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.divLine{
+  background: #e3e3e3;
+  width: 100%;
+  height: 2rpx;
+ }
+ 

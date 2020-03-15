@@ -22,22 +22,13 @@ Page({
 
   //页面开始加载 就会触发
   onLoad: function (options) {
-    //发送异步请求获取轮播图数据
-    // wx.request({
-    //   url: 'http://49.234.18.144/jx/public/api/ads?position=首页',
-    //   success: (result) => {
-    //     this.setData({
-    //       swiperList:result.data.data
-    //     })
-    //   }
-    // });
       this.getSwiperList();
       this.getProductList();
   },
 
   //获取轮播图数据
   getSwiperList(){
-    request({ url:"http://49.234.18.144/jx/public/api/ads?position=首页"})
+    request({ url:"/api/ads?position=首页"})
     .then(result => {
       this.setData({
         swiperList:result.data.data
@@ -46,11 +37,11 @@ Page({
   },
   //获取新品数据
   getProductList(){
-    request({ url:"http://49.234.18.144/jx/public/api/products?limit=4"})
+    request({ url:"/api/products?limit=4"})
     .then(result => {
       this.setData({
         productList:result.data.data
       })
     })
-  }
+  },
 });

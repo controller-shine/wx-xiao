@@ -1,12 +1,89 @@
-<!--pages/malllist/index.wxml-->
 <view class="container">
-  <view class="page-body">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-        <block wx:for="{{swiperList}}" wx:key="id">
-          <swiper-item>
-            <view class="swiper-item {{item}}"><image mode="widthFix" src="http://49.234.18.144/jx/public{{item.img}}"></image></view>
-          </swiper-item>
-        </block>
-      </swiper>
-  </view>
+	<view class="bg" style='width:100%;min-height:100%;background-image:url("http://49.234.18.144/jx/public/Uploads/2020-03-06/1583514373123456.png");background-size:100% 100%;'>
+		<view class="page-body" style="margin-left:5%; width:90%;">
+			<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+				<block wx:for="{{swiperList}}" wx:key="id">
+					<swiper-item>
+						<view class="swiper-item {{item}}">
+							<image mode="widthFix" src="http://49.234.18.144/jx/public{{item.img}}"></image>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
+	<view>
+		<view class="shangpin">
+			<van-row class="shaixuan">
+				<van-col span="6">
+					<view style="margin-left:40rpx; margin-top:30rpx">商品筛选</view>
+				</van-col>
+				<van-col span="15">
+					<view style="margin-top:4%;">
+						<view class="cu-bar">
+							<view>
+								<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+									<view style="font-size:24rpx;margin-left:15rpx;color:#fff;" class="picker">
+										新设备
+									</view>
+								</picker>
+							</view>
+							<view class="search-form">
+								<input type="text" placeholder="搜索" confirm-type="search"></input>
+							</view>
+							<view style="width:42rpx" class="sousuo">
+								<image style="margin-left:-18rpx;margin-top:12rpx; width:16px;height:16px;" src="../../img/mall/sou.png"></image>
+							</view>
+						</view>
+					</view>
+				</van-col>
+				<van-col span="3">
+					<image style="width:54rpx;height:49.5rpx;margin-top:28rpx;margin-left:-20rpx;" src="../../img/mall/gou.png"></image>
+				</van-col>
+			</van-row>
+		</view>
+
+		<view class="chanpin">
+			<scroll-view scroll-x="true" class="tab-h">
+				<view class="tab-item {{index===currentIndex?'active':''}}" wx:for="{{cateList}}" wx:key="cate_id" data-id="{{item.id}}" data-index="{{index}}" bindtap="handleItemTap">{{item.name}}</view>
+			</scroll-view>
+			<swiper class="tab-content" current="{{index}}" duration="300" bindchange="switchTab" style="height:1000rpx">
+				<swiper-item>
+					<scroll-view scroll-y="true" class="scoll-h">
+						<block wx:for="{{productList}}" wx:key="id">
+							<van-col span="12">
+								<view class="cu-card case {{isCard?'no-card':''}}">
+									<view class="cu-item shadow bg-grey">
+										<view class="image">
+											<image src="http://49.234.18.144/jx/public{{item.img}}" style="height:240rpx;"></image>
+										</view>
+										<van-row>
+											<view style="margin-left:10rpx;">
+												<van-col span="19">
+													<view style=" font-size:24rpx;color:#000;">{{item.title}}</view>
+													<view style=" font-size:20rpx;">
+														<van-row>
+															<van-col span="12"><view style="color:#ff5400;">￥{{item.price}}</view></van-col>
+															<van-col span="12"><view style="color:#c0c0c0;">7人成交</view></van-col>
+														</van-row>
+														<van-row>
+															<van-col span="10"><view style="color:#c0c0c0;">会员价：</view></van-col>
+															<van-col span="5"><view style="color:#ff5400; margin-left:-20rpx;">￥{{item.vprice}}</view></van-col>
+														</van-row>
+													</view>
+												</van-col>
+											</view>
+											<van-col span="4">
+												<image style="margin-left:-20rpx;margin-top:20rpx; width:50rpx;height:56rpx;" src="../../img/mall/gou1.png"></image>
+											</van-col>
+										</van-row>
+									</view>
+								</view>
+							</van-col>
+						</block>
+					</scroll-view>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
 </view>

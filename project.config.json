@@ -61,6 +61,48 @@
 					"id": -1,
 					"name": "pages/service/index",
 					"pathName": "pages/service/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/my/home/home",
+					"pathName": "pages/my/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/malllist/index",
+					"pathName": "pages/malllist/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/map/index",
+					"pathName": "pages/map/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/cart/index",
+					"pathName": "pages/cart/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/member/index",
+					"pathName": "pages/member/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/malllists/index",
+					"pathName": "pages/malllists/index",
 					"scene": null
 				}
 			]

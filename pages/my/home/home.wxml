@@ -1,0 +1,71 @@
+<scroll-view scroll-y class="scrollPage">
+
+	<view style="height:200rpx;margin-top:40rpx;">
+		<van-row wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+			<van-col offset="6" span="6">
+				<image style="margin-top:10rpx; width:160rpx;height:160rpx;" src="../../../img/my/touxiang.png"></image>
+			</van-col>
+			<van-col span="6">
+				<view style="margin-top:18%;font-size:36rpx;">飞翔的鱼</view>
+				<view style="font-size:24rpx;">
+					<image style="margin-top:10rpx;  width:33.6rpx;height:28rpx;" src="../../../img/my/vip.png"></image>普通会员
+				</view>
+			</van-col>
+		</van-row>
+	</view>
+	<view class="padding flex text-center text-grey bg-white shadow-warp">
+		<view class="flex flex-sub flex-direction solid-right">
+			<view class="text-xxl text-orange">
+				<image style=" height:79.8rpx;width:86.4rpx;" src="../../../img/my/fuwu.png"></image>
+			</view>
+			<view class="margin-top-sm">服务单</view>
+		</view>
+		<view class="flex flex-sub flex-direction solid-right">
+			<view class="text-xxl text-blue">
+				<image style="height:73.8rpx;width:73.8rpx;" src="../../../img/my/gouwu.png"></image>
+			</view>
+			<view class="margin-top-sm">购物单</view>
+		</view>
+		<view class="flex flex-sub flex-direction">
+			<view class="text-xxl text-green">
+				<image style="height:76.2rpx;width:76.2rpx;" src="../../../img/my/tuangou.png"></image>
+			</view>
+			<view class="margin-top-sm">团购单</view>
+		</view>
+	</view>
+	<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+		<view class="cu-item arrow">
+			<view class="content" bindtap="CopyLink">
+				<image style="width:42.6rpx;height:42.6rpx;" src="../../../img/my/huiyuan.png"></image>
+				<text style="margin-left:20rpx;" class="text-grey">会员信息</text>
+			</view>
+		</view>
+		<view class="cu-item arrow">
+			<navigator class="content" url="/pages/about/about/about" hover-class="none">
+				<image style="width:42.6rpx;height:42.6rpx;" src="../../../img/my/youhui.png"></image>
+				<text  style="margin-left:20rpx;"class="text-grey">我的优惠卷</text>
+			</navigator>
+		</view>
+		<view class="cu-item arrow">
+			<navigator class="content" url="/pages/about/log/log" hover-class="none">
+				<image style="width:42.6rpx;height:42.6rpx;" src="../../../img/my/ma.png"></image>
+				<text  style="margin-left:20rpx;" class="text-grey">我的设备</text>
+			</navigator>
+		</view>
+			<view class="cu-item arrow">
+				<view class="content" bindtap="showQrcode">
+					<image style="width:53.4rpx;height:35.4rpx;" src="../../../img/my/tousu.png"></image>
+					<text  style="margin-left:20rpx;" class="text-grey">投诉建议</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<button class="cu-btn content" open-type="feedback">
+					<image style="width:42.6rpx;height:42.6rpx;" src="../../../img/my/xitong.png"></image>
+					<text  style="margin-left:20rpx;" class="text-grey">系统设置</text>
+				</button>
+			</view>
+		</view>
+	<view class="cu-tabbar-height"></view>
+</scroll-view>
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
